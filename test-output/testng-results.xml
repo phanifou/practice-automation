@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="51" started-at="2018-06-02T20:17:12Z" finished-at="2018-06-02T20:17:12Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="51" started-at="2018-06-02T20:17:12Z" finished-at="2018-06-02T20:17:12Z">
+      <class name="com.automation.practice.java.basic.TwoNumberSwapNo3rdElement">
+        <test-method status="PASS" signature="swapTwoNumbersWithNo3rdNum()[pri:0, instance:com.automation.practice.java.basic.TwoNumberSwapNo3rdElement@4f51b3e0]" name="swapTwoNumbersWithNo3rdNum" duration-ms="19" started-at="2018-06-02T20:17:12Z" finished-at="2018-06-02T20:17:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- swapTwoNumbersWithNo3rdNum -->
+      </class> <!-- com.automation.practice.java.basic.TwoNumberSwapNo3rdElement -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
