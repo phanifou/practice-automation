@@ -25,6 +25,8 @@ public class ReadPdf {
 	            log.info("Total file length--> " + reader.getFileLength());
 	            log.info("Pdf height --> " +psize.getHeight());
 	            log.info("Pdf page width--> " +psize.getWidth());
+	            
+	            
 	        }
 	        catch (Exception de) {
 	            de.printStackTrace();

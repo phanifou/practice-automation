@@ -1,6 +1,8 @@
 package com.automation.practice.db;
 
 import java.sql.*;
+import java.util.Enumeration;
+import java.util.Vector;
 
 import org.slf4j.*;
 
@@ -21,6 +23,14 @@ public class MariaDB {
 	            //STEP 2: Register JDBC driver
 	            Class.forName(JDBC_DRIVER);
 
+	            log.info("Dirver is--> " + DriverManager.getDriver(DB_URL));
+	            log.info("Dirvers are--> " + DriverManager.getDrivers())
+	            ;
+	            
+	            Enumeration<Driver> e = DriverManager.getDrivers();
+	            while(e.hasMoreElements())
+	            	System.out.println("Driver list -->" + e.nextElement().toString());
+	            
 	            //STEP 3: Open a connection
 	            log.info("Connecting to a selected database...");
 	            conn = DriverManager.getConnection(
@@ -42,15 +52,17 @@ public class MariaDB {
 	            log.info("Created table in given database...");*/
 	            
 	            log.info("Preparing query to insert values");
-	            String query = "insert into registration (id, first, last, age)"
+	           String query = "insert into registration (id, first, last, age)"
 	            		+ " values (?,?,?,?)";
 	            PreparedStatement prepStmt = conn.prepareStatement(query);
-	            prepStmt.setInt(1, 21);
+	            
+	            prepStmt.setInt(1, 30);
 	            prepStmt.setString(2, "Phani");
 	            prepStmt.setString(3, "Kumar");
 	            prepStmt.setInt(4, 27);
 	            log.info("Executing query to insert values");
 	            prepStmt.execute();
+	                   
 	            log.info("Values successfully inserted into registration");
 	        } catch (SQLException se) {
 	            //Handle errors for JDBC
